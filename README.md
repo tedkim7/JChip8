@@ -17,6 +17,7 @@ Throughout this project, I familiarized myself with bitwise operations, (CHIP-8)
 The keyboard of a CHIP-8 system looked something like this: 
 
 ![Source: https://internet-janitor.itch.io/octo/devlog/110279/adaptive-touch-input](https://img.itch.zone/aW1nLzI2ODk1NzIuanBlZw==/original/xZ5LTR.jpeg)
+
 In order to preserve the keypad nature of the keyboard, I stylized my keyboard like this:
 |  |  |  |  |
 |--|--|--|--|
@@ -27,7 +28,8 @@ In order to preserve the keypad nature of the keyboard, I stylized my keyboard l
 
 
 ## Gallery
-![Test cases passed](https://i.imgur.com/SDy2DAi.png "Passed test cases")![Breakout](https://i.imgur.com/vkyEJe5.png "Playing Breakout")
+![Test cases passed](https://i.imgur.com/SDy2DAi.png "Passed test cases")
+![Breakout](https://i.imgur.com/vkyEJe5.png "Playing Breakout")
 ![Space Invaders](https://i.imgur.com/COvzDOg.png "Space Invaders title screen")
 
 ## Installing
