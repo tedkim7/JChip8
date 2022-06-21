@@ -1,4 +1,4 @@
-﻿# CHIP-8 Emulator
+﻿# JChip8: A Java CHIP-8 Emulator
 
 This is an emulator for the CHIP-8 interpreted language. CHIP-8 was originally developed for the COSMAC VIP and Telmac 1800 microcomputers of the 1970s. You can read more about CHIP-8 [here](https://en.wikipedia.org/wiki/CHIP-8).
 
