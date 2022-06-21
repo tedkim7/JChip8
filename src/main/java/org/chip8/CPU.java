@@ -297,7 +297,7 @@ public class CPU {
         } else {
             V[0xF] = 0;
         }
-        V[x] = (V[x] & 0xFF) - (V[y] & 0xFF); // V[x] -= V[y]
+        V[x] = (V[x] & 0xFF) - (V[y] & 0xFF);
     }
 
     /** 8xy6: SHR Vx */
@@ -316,13 +316,12 @@ public class CPU {
         } else {
             V[0xF] = 0;
         }
-        V[x] = (byte) (V[y] - V[x]);
+        V[x] = (V[y] & 0xFF) - (V[x] & 0xFF);
     }
 
     /** 8xyE: SHL Vx {, Vy} */
     public void op8xyE() {
         int x = (opcode & 0xF00) >> 8;
-        int y = (opcode & 0xF0) >> 4;
         V[0xF] = (V[x] & 0x80) >> 7;
         V[x] <<= 1;
     }
@@ -457,8 +456,8 @@ public class CPU {
     public void opFx33() {
         int x = (opcode & 0x0F00) >> 8;
         memory[index] = (V[x] & 0xFF) / 100; // hundreds digit of V[x]
-        memory[index + 1] = ((V[x] & 0xFF) % 100) / 10; // tens digit of V[x]
-        memory[index + 2] = ((V[x] & 0xFF) % 100) % 10; // ones digit of V[x]
+        memory[index + 1] = ((V[x] & 0xFF) / 10) % 10; // tens digit of V[x]
+        memory[index + 2] = ((V[x] & 0xFF) % 10); // ones digit of V[x]
     }
 
     /** Fx55: LD [I], Vx */
